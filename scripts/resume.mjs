@@ -147,7 +147,7 @@ const html = `<!doctype html>
 <style>
   @page { size: Letter; margin: 0.45in 0.55in; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: "Times New Roman", Times, "Liberation Serif", serif; font-size: 10.5pt; line-height: 1.24; color: #000; }
+  body { font-family: "Times New Roman", Times, "Liberation Serif", serif; font-size: 10.5pt; line-height: 1.2; color: #000; }
   a { color: inherit; text-decoration: underline; text-underline-offset: 1pt; }
   header { text-align: center; }
   h1 { font-size: 24pt; font-weight: normal; line-height: 1.1; }
@@ -155,7 +155,7 @@ const html = `<!doctype html>
   h2 { font-size: 11.5pt; border-bottom: 0.75pt solid #999; padding-bottom: 1pt; margin: 9pt 0 3pt; break-after: avoid; }
   .row { display: flex; justify-content: space-between; gap: 12pt; }
   .right { white-space: nowrap; text-align: right; }
-  .entry { margin-bottom: 6pt; }
+  .entry { margin-bottom: 6pt; break-inside: avoid; }
   .head { break-inside: avoid; break-after: avoid; }
   ul { margin: 1pt 0 0 14pt; }
   li { margin-bottom: 0.5pt; padding-left: 1pt; break-inside: avoid; }
