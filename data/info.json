@@ -36,6 +36,8 @@
   "social": [
     { "label": "GitHub", "url": "https://github.com/ruijindev0801" },
     { "label": "X", "url": "https://x.com/invictusDev0" },
+    { "label": "WhatsApp", "url": "https://wa.me/639312071477" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/rui-jin-319400434", "hidden": true },
     { "label": "Hugging Face", "url": "https://huggingface.co/ruijindev0801", "hidden": true },
     { "label": "Kaggle", "url": "https://www.kaggle.com/ruijindev0801", "hidden": true }
   ],
@@ -284,7 +286,7 @@
 
   "contact": {
     "heading": "Get in touch",
-    "message": "I'm looking for a lead role on an AI-focused team. Email is the quickest way to reach me, or you can book a short call.",
+    "message": "I'm looking for a lead role on an AI-focused team. Email is the quickest way to reach me, but WhatsApp works too.",
     "booking": { "label": "Book a call", "url": "https://cal.com/rui-jin/short-call" }
   }
 }

@@ -1,15 +1,18 @@
 import { CalendarDays, Mail } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 import { CopyEmailButton } from "@/components/copy-email-button";
 import { SocialLinks } from "@/components/social-links";
 import { Badge } from "@/components/ui/badge";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { Button } from "@/components/ui/button";
+import { isWhatsApp } from "@/lib/link-icons";
 import type { Info } from "@/lib/types";
 
 /** Closing call-to-action card. Rendered in place of a regular Section. */
 export function Contact({ info }: { info: Info }) {
-  const { email } = info.profile;
+  const { email, phone } = info.profile;
   const booking = info.contact?.booking;
+  const whatsapp = info.social?.find((link) => isWhatsApp(link.url));
   return (
     <section id="contact" aria-labelledby="contact-title" className="pt-24 sm:pt-28">
       <BlurFade inView direction="up">
@@ -23,7 +26,7 @@ export function Contact({ info }: { info: Info }) {
             {info.contact?.message && (
               <p className="mx-auto mt-4 max-w-md text-pretty text-muted-foreground">{info.contact.message}</p>
             )}
-            {(email || booking) && (
+            {(email || whatsapp || booking) && (
               <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
                 {email && (
                   <>
@@ -36,6 +39,21 @@ export function Contact({ info }: { info: Info }) {
                     <CopyEmailButton email={email} />
                   </>
                 )}
+                {whatsapp && (
+                  <Button asChild size="lg" variant="outline">
+                    <a href={whatsapp.url} target="_blank" rel="noreferrer">
+                      <SiWhatsapp data-icon="inline-start" aria-hidden="true" />
+                      {phone ? (
+                        <>
+                          <span className="sr-only">WhatsApp </span>
+                          {phone}
+                        </>
+                      ) : (
+                        whatsapp.label
+                      )}
+                    </a>
+                  </Button>
+                )}
                 {booking && (
                   <Button asChild size="lg" variant="outline">
                     <a href={booking.url} target="_blank" rel="noreferrer">
@@ -46,7 +64,8 @@ export function Contact({ info }: { info: Info }) {
                 )}
               </div>
             )}
-            <SocialLinks links={info.social} className="mt-6 justify-center" />
+            {/* WhatsApp already has a button above with the number on it, so it's left out of the icons. */}
+            <SocialLinks links={info.social?.filter((link) => link !== whatsapp)} className="mt-6 justify-center" />
           </div>
         </div>
       </BlurFade>

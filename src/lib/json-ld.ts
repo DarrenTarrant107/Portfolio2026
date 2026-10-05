@@ -1,3 +1,4 @@
+import { isWhatsApp } from "./link-icons";
 import type { Info } from "./types";
 
 /**
@@ -8,7 +9,7 @@ export function personJsonLd(info: Info): string {
   const { profile, settings } = info;
   // Self-employment isn't an employer, and messaging links (WhatsApp) aren't profiles.
   const current = info.experience?.find((job) => !job.end && !/self[- ]?employed|freelance/i.test(job.company));
-  const profiles = info.social?.map((link) => link.url).filter((url) => !/wa\.me|whatsapp\.com/i.test(url));
+  const profiles = info.social?.map((link) => link.url).filter((url) => !isWhatsApp(url));
 
   const person = {
     "@context": "https://schema.org",

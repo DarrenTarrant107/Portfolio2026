@@ -36,6 +36,11 @@ import {
 /** Any icon component: lucide-react and react-icons both accept `className`. */
 export type Icon = ComponentType<{ className?: string }>;
 
+/** WhatsApp chat links (wa.me, whatsapp.com): a way to message someone, not a profile. */
+export function isWhatsApp(url: string): boolean {
+  return /wa\.me|whatsapp\.com/i.test(url);
+}
+
 // Brand logos, matched against the link's host.
 const BRANDS: [RegExp, Icon][] = [
   [/(^|\.)github\.com$/, SiGithub],
