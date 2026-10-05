@@ -2,6 +2,7 @@
   "settings": {
     "siteUrl": "https://ruijin-ai-dev.vercel.app",
     "defaultTheme": "system",
+    "viewCounter": "ruijin-ai-dev",
     "sections": [
       "now",
       "about",

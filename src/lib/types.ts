@@ -153,6 +153,11 @@ export type Settings = {
   defaultTheme?: string;
   /** Section order. Leave a key out to hide that section. */
   sections: string[];
+  /**
+   * Name for the public view counter in the footer ("1,234 views", counted by abacus.jasoncameron.dev).
+   * 3-64 letters, digits, "-", "_" or ".". Keep it the same so the count carries over; leave it out to hide the counter.
+   */
+  viewCounter?: string;
 };
 
 export type Info = {

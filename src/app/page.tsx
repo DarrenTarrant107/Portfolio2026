@@ -104,7 +104,7 @@ export default function Home() {
         )}
       </main>
 
-      <Footer name={profile.name} />
+      <Footer name={profile.name} siteUrl={info.settings.siteUrl} viewCounter={info.settings.viewCounter} />
       {/* biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD built from our own data, with "<" escaped (see json-ld.ts) */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: personJsonLd(info) }} />
     </>
