@@ -53,22 +53,22 @@ const isMessaging = (url) => /wa\.me|whatsapp\.com/i.test(url);
 
 // ---------- content ----------
 
+const whatsapp = social.find((l) => isMessaging(l.url));
+
+// One line, like a classic resume header: location, phone, email, then profiles as
+// clickable names. The phone opens WhatsApp when there's a WhatsApp link; the email
+// stays written out so it can be read (and copied) from the page itself.
 const contactLine = [
   profile.location && escapeHtml(profile.location),
-  profile.phone && `${escapeHtml(profile.phone)}${social.some((l) => isMessaging(l.url)) ? " (WhatsApp)" : ""}`,
+  profile.phone && (whatsapp ? link(whatsapp.url, `${profile.phone} (WhatsApp)`) : escapeHtml(profile.phone)),
   profile.email && link(`mailto:${profile.email}`, profile.email),
-].filter(Boolean);
-
-// Portfolio first, then the first three profiles in info.json order. The addresses are
-// written out, not hidden behind words like "GitHub", because ATS parsers and printed
-// copies only see the visible text. WhatsApp is covered by the phone number.
-const linkLine = [
-  link(settings.siteUrl),
+  link(settings.siteUrl, "Portfolio"),
+  // The first three profiles in info.json order. WhatsApp is covered by the phone number.
   ...social
     .filter((l) => !isMessaging(l.url))
     .slice(0, 3)
-    .map((l) => link(l.url)),
-];
+    .map((l) => link(l.url, l.label)),
+].filter(Boolean);
 
 const section = (title, body) => (body ? `<section><h2>${title}</h2>${body}</section>` : "");
 const bullets = (items = []) =>
@@ -166,7 +166,6 @@ const html = `<!doctype html>
   <header>
     <h1>${escapeHtml(profile.name)}</h1>
     <p class="contact">${contactLine.join(" | ")}</p>
-    <p class="contact">${linkLine.join(" | ")}</p>
   </header>
   ${section("Professional Summary", summary)}
   ${section("Skills", skills)}
