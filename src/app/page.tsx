@@ -46,12 +46,7 @@ function SectionContent({ id }: { id: Exclude<SectionKey, "contact"> }) {
     case "expertise":
       return <Expertise items={info.expertise ?? []} />;
     case "experience":
-      // Long bullet lines read badly at full width, so the timeline keeps a comfortable measure.
-      return (
-        <div className="max-w-4xl">
-          <ExperienceList items={info.experience ?? []} />
-        </div>
-      );
+      return <ExperienceList items={info.experience ?? []} />;
     case "projects":
       return <ProjectList items={info.projects ?? []} />;
     case "publications":
@@ -61,11 +56,7 @@ function SectionContent({ id }: { id: Exclude<SectionKey, "contact"> }) {
     case "skills":
       return <Skills groups={info.skills ?? []} />;
     case "education":
-      return (
-        <div className="max-w-4xl">
-          <EducationList items={info.education ?? []} />
-        </div>
-      );
+      return <EducationList items={info.education ?? []} />;
     case "certifications":
       return <CredentialList items={info.certifications ?? []} kind="certification" />;
     case "awards":

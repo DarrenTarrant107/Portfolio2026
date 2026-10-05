@@ -7,6 +7,8 @@ const EXTERNAL = /^https?:\/\//;
 /**
  * Resume-style row: title with a right-aligned date on wide screens (the date
  * moves above the title on phones), a muted subtitle underneath, then content.
+ * The title row spans the full width so dates line up with the rest of the page;
+ * the content below keeps a comfortable line length.
  */
 export function Entry({
   title,
@@ -30,7 +32,7 @@ export function Entry({
           </p>
         )}
       </div>
-      {children}
+      {children && <div className="max-w-3xl">{children}</div>}
     </div>
   );
 }
