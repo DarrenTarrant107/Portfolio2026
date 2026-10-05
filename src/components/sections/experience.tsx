@@ -24,7 +24,7 @@ export function ExperienceList({ items }: { items: Experience[] }) {
             }
             meta={formatRange(job.start, job.end)}
           >
-            {job.summary && <p className="mt-3 text-pretty">{job.summary}</p>}
+            {job.summary && <p className="mt-3">{job.summary}</p>}
             <Bullets items={job.highlights} className="mt-3" />
             <TechTags items={job.tech} className="mt-4" />
           </Entry>

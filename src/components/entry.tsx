@@ -7,8 +7,7 @@ const EXTERNAL = /^https?:\/\//;
 /**
  * Resume-style row: title with a right-aligned date on wide screens (the date
  * moves above the title on phones), a muted subtitle underneath, then content.
- * The title row spans the full width so dates line up with the rest of the page;
- * the content below keeps a comfortable line length.
+ * Everything spans the full width, so the text runs to the same right edge as the dates.
  */
 export function Entry({
   title,
@@ -32,7 +31,7 @@ export function Entry({
           </p>
         )}
       </div>
-      {children && <div className="max-w-3xl">{children}</div>}
+      {children}
     </div>
   );
 }
@@ -66,7 +65,7 @@ export function Bullets({ items, className }: { items?: string[]; className?: st
   return (
     <ul className={cn("list-disc space-y-1.5 pl-5 text-foreground/90 marker:text-muted-foreground/50", className)}>
       {items.map((item) => (
-        <li key={item} className="pl-1 text-pretty">
+        <li key={item} className="pl-1">
           {item}
         </li>
       ))}
