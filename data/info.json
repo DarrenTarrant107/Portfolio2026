@@ -21,14 +21,14 @@
 
   "profile": {
     "name": "Rui Jin",
-    "headline": "AI/ML Engineer",
+    "headline": "Senior AI/ML Engineer",
     "location": "Surigao del Norte, Philippines",
     "email": "ruijin.developer@gmail.com",
     "avatar": "",
     "status": "Open to lead AI/ML roles",
     "bio": "Right now I help train and evaluate large language models on Outlier and AfterQuery, writing prompts and grading model answers against detailed rubrics. Over 7+ years I've built ML and full-stack software, from real-time computer vision on phones and drones to the apps around it.",
     "resume": "/Rui_Jin_Resume.pdf",
-    "summary": "AI/ML engineer with 7+ years of experience building computer vision and machine learning systems, from real-time pose tracking on iOS and Android phones to the data pipelines, MLOps tooling, and full-stack web apps around them. Hands-on with Python, TensorFlow, OpenCV, YOLO, React, Next.js, AWS, and Google Cloud, and currently doing LLM training and evaluation work.",
+    "summary": "Senior AI/ML Engineer with 7+ years of experience building computer vision, on-device machine learning, and large language model (LLM) systems, along with the data pipelines and full-stack software around them. Built real-time pose and gesture tracking that runs on-device on iOS and Android phones at a 30 fps target, YOLO-based object detection for phones and drones, and 20+ full-stack and AI integration projects for clients on AWS and Google Cloud. Currently train and evaluate LLMs through prompt engineering, rubric-based evaluation, and hallucination review. Experienced in taking models from data pipelines and training through optimization, deployment, and real-world accuracy testing.",
     "phone": "+63 931 207 1477",
     "mainTech": ["Python", "TensorFlow", "OpenCV", "YOLO", "LLMs", "React", "Next.js", "AWS", "Google Cloud"]
   },
@@ -114,13 +114,12 @@
       "company": "Outlier & AfterQuery",
       "start": "2025-03",
       "end": null,
-      "summary": "Help AI companies train and evaluate their large language models through two platforms: Outlier and AfterQuery.",
+      "summary": "Help AI companies train and evaluate their large language models (LLMs) through the Outlier and AfterQuery platforms, improving the data those models learn from and are measured against.",
       "highlights": [
-        "Write and refine prompts for large language models (LLMs) across classification, summarization, code generation, and multi-step reasoning tasks, including hard prompts built to expose where models fail.",
+        "Write and refine prompts across classification, summarization, code generation, and multi-step reasoning tasks, including hard prompts built to expose where models fail.",
         "Score and compare model responses side by side against detailed rubrics for accuracy, reasoning, and instruction following, and write a clear justification for each rating.",
         "Flag hallucinations and factual errors, and rewrite weak answers into clear, correct reference responses.",
-        "Review generated code for correctness and readability, drawing on 7+ years of software and ML engineering.",
-        "Help raise the quality of the data that LLMs are trained and evaluated on."
+        "Review generated code for correctness and readability, drawing on 7+ years of software and ML engineering."
       ],
       "tech": ["LLMs", "Prompt engineering", "LLM evaluation", "RLHF", "Code review"]
     },
@@ -130,7 +129,7 @@
       "url": "https://www.nex.inc",
       "start": "2022-12",
       "end": "2025-03",
-      "summary": "Worked on real-time body tracking for Nex's motion games on iOS and Android phones.",
+      "summary": "Worked on the real-time body tracking behind Nex's motion-controlled games, where players control the game by moving in front of their phone's camera.",
       "highlights": [
         "Built and optimized lightweight computer vision models for real-time pose and gesture tracking on iOS and Android phones, targeting 30 fps with all inference running on-device.",
         "Worked on two of the hardest parts of the pipeline: encoding high-quality video on the phone and keeping the network connection stable.",
@@ -208,9 +207,9 @@
   "writing": [],
 
   "skills": [
-    { "category": "Languages", "items": ["Python", "TypeScript", "JavaScript", "Java", "C#", "SQL"] },
+    { "category": "Languages", "items": ["Python", "TypeScript", "JavaScript", "Java", "C#", "SQL", "PHP"] },
     {
-      "category": "Machine learning",
+      "category": "Machine learning & computer vision",
       "items": [
         "TensorFlow",
         "scikit-learn",
@@ -220,21 +219,39 @@
         "Computer vision",
         "Object detection",
         "Pose estimation",
+        "Model evaluation"
+      ]
+    },
+    {
+      "category": "On-device & real-time ML",
+      "items": [
         "On-device ML",
-        "ML pipelines",
-        "MLOps"
+        "Model optimization",
+        "Real-time inference",
+        "Sensor fusion",
+        "Video encoding",
+        "iOS",
+        "Android"
       ]
     },
     {
       "category": "LLMs & NLP",
-      "items": ["LLM integration", "LLM evaluation", "Prompt engineering", "Natural language processing (NLP)"]
+      "items": [
+        "LLM evaluation",
+        "Prompt engineering",
+        "Rubric-based evaluation",
+        "Hallucination review",
+        "LLM integration",
+        "Natural language processing (NLP)"
+      ]
     },
-    { "category": "Web development", "items": ["React", "Next.js", "Node.js", "Flask", "Tailwind CSS", "REST APIs"] },
     {
-      "category": "Cloud & DevOps",
-      "items": ["AWS", "Google Cloud (GCP)", "Kubernetes", "Docker", "CI/CD", "Git"]
+      "category": "Data & MLOps",
+      "items": ["ML pipelines", "MLOps", "ETL pipelines", "NoSQL", "Data analytics", "Data visualization"]
     },
-    { "category": "Data", "items": ["NoSQL", "ETL pipelines", "Data analytics", "Data visualization"] }
+    { "category": "Cloud & DevOps", "items": ["AWS", "Google Cloud (GCP)", "Docker", "Kubernetes", "CI/CD", "Git"] },
+    { "category": "Backend & APIs", "items": ["Node.js", "Flask", "Laravel", "REST APIs"] },
+    { "category": "Frontend", "items": ["React", "Next.js", "Tailwind CSS"] }
   ],
 
   "education": [

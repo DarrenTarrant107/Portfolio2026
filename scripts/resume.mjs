@@ -6,6 +6,9 @@
 // public/Rui_Jin_Resume.pdf), which the site's Resume button links to.
 // Needs Chrome, Edge or Chromium installed; set CHROME_PATH to use another browser.
 //
+// Layout follows a classic US resume: centered name, title-case section headings over
+// a thin rule, company and dates on one line, role and place on the next.
+//
 // ATS rules followed: one column, real text (no images or tables), a standard
 // font, standard section headings, contact details in the page body (not in a
 // header/footer), plain black text, US Letter.
@@ -56,8 +59,9 @@ const contactLine = [
   profile.email && link(`mailto:${profile.email}`, profile.email),
 ].filter(Boolean);
 
-// Portfolio first, then the first three profiles in info.json order, so the line fits
-// on one row (the portfolio links to the rest). WhatsApp is covered by the phone number.
+// Portfolio first, then the first three profiles in info.json order. The addresses are
+// written out, not hidden behind words like "GitHub", because ATS parsers and printed
+// copies only see the visible text. WhatsApp is covered by the phone number.
 const linkLine = [
   link(settings.siteUrl),
   ...social
@@ -69,20 +73,28 @@ const linkLine = [
 const section = (title, body) => (body ? `<section><h2>${title}</h2>${body}</section>` : "");
 const bullets = (items = []) =>
   items.length ? `<ul>${items.map((i) => `<li>${escapeHtml(i)}</li>`).join("")}</ul>` : "";
+// Two-sided line: left text, right text (dates, places), as on a classic resume.
+const row = (left, right = "") =>
+  `<div class="row"><span>${left}</span>${right ? `<span class="right">${right}</span>` : ""}</div>`;
 
 const summary = profile.summary ? `<p>${escapeHtml(profile.summary)}</p>` : "";
 
-const skills = (info.skills ?? [])
-  .map((g) => `<p class="skill"><b>${escapeHtml(g.category)}:</b> ${escapeHtml(g.items.join(", "))}</p>`)
-  .join("");
+const skills = info.skills?.length
+  ? `<ul class="skills">${info.skills
+      .map((g) => `<li><b>${escapeHtml(g.category)}</b>: ${escapeHtml(g.items.join(", "))}</li>`)
+      .join("")}</ul>`
+  : "";
 
+// Company and dates in bold, then the role and place in italics, a one-line summary, and bullets.
 const experience = (info.experience ?? [])
   .map(
     (job) => `
     <div class="entry">
-      <div class="row"><span><b>${escapeHtml(job.role)}</b> | ${escapeHtml(job.company)}</span><span class="dates">${formatRange(job.start, job.end)}</span></div>
-      <div class="meta">${escapeHtml([job.location, job.type].filter(Boolean).join(", "))}</div>
-      ${job.summary ? `<p class="summary">${escapeHtml(job.summary)}</p>` : ""}
+      <div class="head">
+        ${row(`<b>${escapeHtml(job.company)}</b>`, `<b>${formatRange(job.start, job.end)}</b>`)}
+        ${row(`<i>${escapeHtml(job.role)}</i>`, job.location ? `<i>${escapeHtml(job.location)}</i>` : "")}
+      </div>
+      ${job.summary ? `<p>${escapeHtml(job.summary)}</p>` : ""}
       ${bullets(job.highlights)}
     </div>`,
   )
@@ -91,11 +103,14 @@ const experience = (info.experience ?? [])
 const projects = (info.projects ?? [])
   .map((project) => {
     const url = project.url ?? project.links?.[0]?.url;
-    // Right column: the link, or the note (e.g. "Client work · NDA") when there's nothing to link.
-    const aside = url ? link(absolute(url)) : project.note ? escapeHtml(project.note) : "";
+    // Right side: the link, or the note (e.g. "Client work · NDA") when there's nothing to link.
+    const aside = url ? link(absolute(url)) : project.note ? `<i>${escapeHtml(project.note)}</i>` : "";
     return `
     <div class="entry">
-      <div class="row"><span><b>${escapeHtml(project.name)}</b>${project.tech?.length ? ` | ${escapeHtml(project.tech.join(", "))}` : ""}</span>${aside ? `<span class="dates">${aside}</span>` : ""}</div>
+      <div class="head">
+        ${row(`<b>${escapeHtml(project.name)}</b>`, aside)}
+        ${project.tech?.length ? row(`<i>${escapeHtml(project.tech.join(", "))}</i>`) : ""}
+      </div>
       <p>${escapeHtml(project.description)}</p>
     </div>`;
   })
@@ -105,17 +120,22 @@ const education = (info.education ?? [])
   .map(
     (school) => `
     <div class="entry">
-      <div class="row"><span><b>${escapeHtml(school.degree)}</b> | ${escapeHtml(school.school)}${school.location ? `, ${escapeHtml(school.location)}` : ""}</span><span class="dates">${formatRange(school.start, school.end)}</span></div>
-      ${school.details?.length ? `<p>${escapeHtml(school.details.join(". "))}.</p>` : ""}
+      <div class="head">
+        ${row(`<b>${escapeHtml(school.school)}</b>`, `<b>${formatRange(school.start, school.end)}</b>`)}
+        ${row(`<i>${escapeHtml(school.degree)}</i>`, school.location ? `<i>${escapeHtml(school.location)}</i>` : "")}
+      </div>
+      ${bullets(school.details)}
     </div>`,
   )
   .join("");
 
 const credentials = (items = []) =>
   items
-    .map(
-      (item) => `
-    <div class="row"><span><b>${escapeHtml(item.name)}</b>${item.issuer ? `, ${escapeHtml(item.issuer)}` : ""}</span>${item.date ? `<span class="dates">${formatDate(item.date)}</span>` : ""}</div>`,
+    .map((item) =>
+      row(
+        `<b>${escapeHtml(item.name)}</b>${item.issuer ? `, ${escapeHtml(item.issuer)}` : ""}`,
+        item.date ? `<b>${formatDate(item.date)}</b>` : "",
+      ),
     )
     .join("");
 
@@ -125,35 +145,32 @@ const html = `<!doctype html>
 <meta charset="utf-8">
 <title>${escapeHtml(profile.name)} Resume</title>
 <style>
-  @page { size: Letter; margin: 0.5in 0.6in; }
+  @page { size: Letter; margin: 0.45in 0.55in; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: Arial, Helvetica, "Liberation Sans", sans-serif; font-size: 9.8pt; line-height: 1.32; color: #000; }
-  a { color: inherit; text-decoration: none; }
+  body { font-family: "Times New Roman", Times, "Liberation Serif", serif; font-size: 10.5pt; line-height: 1.24; color: #000; }
+  a { color: inherit; text-decoration: underline; text-underline-offset: 1pt; }
   header { text-align: center; }
-  h1 { font-size: 19pt; line-height: 1.15; }
-  .headline { font-size: 11pt; margin-top: 1pt; }
-  .contact { font-size: 9.3pt; margin-top: 2pt; }
-  h2 { font-size: 10.3pt; text-transform: uppercase; letter-spacing: 0.6pt; border-bottom: 0.8pt solid #000; padding-bottom: 1.5pt; margin: 9pt 0 4pt; }
+  h1 { font-size: 24pt; font-weight: normal; line-height: 1.1; }
+  .contact { font-size: 9.5pt; margin-top: 2pt; }
+  h2 { font-size: 11.5pt; border-bottom: 0.75pt solid #999; padding-bottom: 1pt; margin: 9pt 0 3pt; break-after: avoid; }
   .row { display: flex; justify-content: space-between; gap: 12pt; }
-  .dates { white-space: nowrap; }
-  .entry { margin-bottom: 5pt; break-inside: avoid; }
-  .meta { font-style: italic; font-size: 9.3pt; }
-  .summary { margin-top: 1pt; }
-  ul { margin: 1.5pt 0 0 13pt; }
-  li { margin-bottom: 1pt; padding-left: 1pt; }
-  .skill { margin-bottom: 1pt; }
+  .right { white-space: nowrap; text-align: right; }
+  .entry { margin-bottom: 6pt; }
+  .head { break-inside: avoid; break-after: avoid; }
+  ul { margin: 1pt 0 0 14pt; }
+  li { margin-bottom: 0.5pt; padding-left: 1pt; break-inside: avoid; }
+  .skills { margin-top: 0; }
 </style>
 </head>
 <body>
   <header>
     <h1>${escapeHtml(profile.name)}</h1>
-    <p class="headline">${escapeHtml(profile.headline)}</p>
     <p class="contact">${contactLine.join(" | ")}</p>
     <p class="contact">${linkLine.join(" | ")}</p>
   </header>
-  ${section("Summary", summary)}
+  ${section("Professional Summary", summary)}
   ${section("Skills", skills)}
-  ${section("Experience", experience)}
+  ${section("Work Experience", experience)}
   ${section("Projects", projects)}
   ${section("Education", education)}
   ${section("Certifications", credentials(info.certifications))}
