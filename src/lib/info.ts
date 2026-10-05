@@ -9,7 +9,7 @@ const raw: Info = data;
 export const info: Info = { ...raw, social: raw.social?.filter((link) => !link.hidden) };
 
 export const SECTIONS = {
-  now: { title: "What I'm doing now", nav: "Now" },
+  now: { title: "Current focus", nav: "Focus" },
   about: { title: "About", nav: null },
   expertise: { title: "What I work on", nav: null },
   experience: { title: "Experience", nav: "Experience" },

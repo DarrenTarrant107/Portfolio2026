@@ -26,7 +26,7 @@ export function NowSection({ now }: { now: Now }) {
             <span className="absolute inline-flex size-full animate-ping rounded-full bg-foreground/40 motion-reduce:animate-none" />
             <span className="relative inline-flex size-2 rounded-full bg-foreground" />
           </span>
-          Currently{now.since && ` · since ${formatDate(now.since)}`}
+          {now.since ? `Since ${formatDate(now.since)}` : "Ongoing"}
         </p>
         <h3 className="mt-3 text-2xl font-semibold tracking-tight text-balance">{now.title}</h3>
         <p className="mt-3 max-w-prose text-pretty text-muted-foreground">{now.description}</p>

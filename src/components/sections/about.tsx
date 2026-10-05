@@ -26,7 +26,7 @@ export function About({
 
       {(facts.length > 0 || tech.length > 0) && (
         <BlurFade inView direction="up" delay={0.1} className="h-fit lg:sticky lg:top-24 lg:self-start">
-          <aside aria-label="At a glance" className="rounded-xl border bg-card/80 p-5 backdrop-blur-sm">
+          <div className="rounded-xl border bg-card/80 p-5 backdrop-blur-sm">
             <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">At a glance</p>
             <dl className="mt-4 space-y-3.5 text-sm">
               {facts.map((fact) => (
@@ -56,7 +56,7 @@ export function About({
                 </div>
               )}
             </dl>
-          </aside>
+          </div>
         </BlurFade>
       )}
     </div>

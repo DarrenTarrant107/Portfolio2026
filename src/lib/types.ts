@@ -44,7 +44,7 @@ export type FocusArea = {
   description: string;
 };
 
-/** The "What I'm doing now" section, and the "Now" line of the intro's profile card. */
+/** The "Current focus" section: the work happening right now, featured above About. */
 export type Now = {
   /** Short, e.g. "AI training & LLM evaluation". */
   title: string;
