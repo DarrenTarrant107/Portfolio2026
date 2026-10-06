@@ -108,8 +108,8 @@
       "description": "Deep learning models for real-time object detection, tracking, and pose estimation, from body tracking on phones to drone-based systems"
     },
     {
-      "title": "On-device ML",
-      "description": "Making models smaller and faster so real-time tracking runs at 30 fps on iOS and Android phones, plus the camera, video encoding, and inference code around them"
+      "title": "On-device ML\",
+      \"description\": \"Making models smaller and faster so real-time tracking runs at 30 fps on iOS and Android phones, plus the camera, video encoding, and inference code around them\"
     },
     {
       "title": "MLOps",
@@ -313,7 +313,7 @@
       "name": "Certified AI/ML Engineer",
       "issuer": "micro1",
       "date": "2026-05-14",
-      "url": "/certificates/593317626-7fd61629-16a1-4dab-8b8b-08942077441e.png"
+      "url": "/certificates/micro1-ai-ml-engineer.png"
     }
   ],
 
