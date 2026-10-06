@@ -27,7 +27,7 @@
     "email": "carlosvalmonte78@gmail.com",
     "avatar": "",
     "status": "Open to lead AI/ML roles",
-    "bio": "Right now I help train and evaluate large language models on Outlier and AfterQuery, writing prompts and grading model answers against detailed rubrics. Over 7+ years I've built ML and full-stack software, from real-time computer vision on phones and drones to the apps around it.",
+    "bio": "Senior AI/ML Fullstack Engineer with expertise in reverse engineering, bot automation, and AI-powered integrations. I build AI agents, LLM systems, browser automation tools, and AIO/ACO applications. Experience with anti-bot systems (Akamai, DataDome, Incapsula), API analysis, Android/iOS debugging, and production AI SaaS platforms. Over 7+ years building ML systems, real-time tracking, and full-stack software.",
     "resume": "/Carlos_Valmonte_Resume.pdf",
     "summary": "Senior AI/ML Engineer with 7+ years of experience building computer vision, on-device machine learning, and large language model (LLM) systems, along with the data pipelines and full-stack software around them. Built real-time pose and gesture tracking that runs on-device on iOS and Android phones at a 30 fps target, YOLO-based object detection for phones and drones, and 20+ full-stack and AI integration projects for clients on AWS and Google Cloud. Currently train and evaluate LLMs through prompt engineering, rubric-based evaluation, and hallucination review. Experienced in taking models from data pipelines and training through optimization, deployment, and real-world accuracy testing.",
     "phone": " ",
@@ -36,9 +36,8 @@
 
   "social": [
     { "label": "GitHub", "url": "https://github.com/alexmarques13" },
-    { "label": "X", "url": "https://x.com/invictusDev0" },
     { "label": "WhatsApp", "url": "https://wa.me/447418355740", "hidden": true },
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/carlosvalmonte", "hidden": true }
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/carlosvalmonte-dev", "hidden": true }
   ],
 
   "now": {
@@ -74,20 +73,39 @@
   },
 
   "about": [
-    "I started as a full-stack developer and moved into AI/ML because it's the fastest-growing part of software, and I wanted to build my career there. Most of my work now sits where machine learning meets real products. I train and tune models in Python with TensorFlow and scikit-learn, and I'm just as comfortable building the React or Next.js app that puts a model in front of users, or the AWS and Google Cloud setup it runs on.",
-    "At Nex, I worked on real-time body tracking for motion games on iOS and Android phones. Tracking had to run at 30 frames per second on the phone itself, and two of the hardest problems were encoding high-quality video and keeping the network connection stable. I trained and optimized lightweight vision models and built the data pipelines and debugging tools we used to test and ship them.",
-    "I also built a marine object detection system for a marine company: a YOLO26 model, stable enough to run on phones and drones, that spots kelp, plastic bottles, surfers, whales, boats, and containers. Before Nex, I delivered 20+ full-stack and AI integration projects on Upwork.",
-    "Today I do LLM training and evaluation work with Outlier and AfterQuery, and in May 2026 I passed micro1's AI interview to become a certified AI/ML Engineer. Next, I'm looking for a lead role on an AI-focused team where I can build for the next five years."
+    "I'm a Senior AI/ML Fullstack Engineer with deep expertise in reverse engineering, bot automation, and AI integrations. My work spans AI agents and LLM integrations with RAG pipelines, browser automation and web scraping, API/protocol analysis and reverse engineering, AIO/ACO tooling and automation, and anti-bot research on platforms like Akamai, DataDome, and Incapsula. I also specialize in CAPTCHA automation, Android/iOS analysis, retail automation, and Discord/Whop ecosystem integrations.",
+    "I've built production AI SaaS platforms, web and mobile applications, and automation systems handling queue processing and account management. My foundation includes 7+ years building ML systems—from real-time body tracking on iOS/Android phones at 30 fps to YOLO-based object detection for drones, marine detection systems, and 20+ full-stack and AI integration projects.",
+    "Today I work on LLM training and evaluation, and I'm skilled in reverse engineering complex systems, analyzing browser fingerprints, bypassing anti-bot protections, and building intelligent automation tools. I'm looking for a role where I can lead AI/ML and automation initiatives on a fast-moving team."
   ],
 
   "expertise": [
     {
-      "title": "LLMs & NLP",
-      "description": "Prompt engineering, rubric-based evaluation, hallucination review, and LLM features in client products"
+      "title": "AI Agents & LLMs",
+      "description": "AI agents, LLM integrations, RAG pipelines, prompt engineering, and production AI systems"
     },
     {
-      "title": "Computer vision",
-      "description": "Deep learning models for real-time object detection, tracking, and pose estimation, from body tracking on phones to marine detection on drones with YOLO26"
+      "title": "Reverse Engineering & API Analysis",
+      "description": "API and protocol analysis, reverse engineering applications, binary inspection, and understanding proprietary systems"
+    },
+    {
+      "title": "Anti-Bot & Browser Security",
+      "description": "Akamai, DataDome, Incapsula bypass techniques, browser fingerprint analysis, CAPTCHA automation, and WAF evasion"
+    },
+    {
+      "title": "Browser Automation & Web Scraping",
+      "description": "Selenium, Puppeteer, Playwright automation for retail, inventory, ticketing, and account management systems"
+    },
+    {
+      "title": "AIO / ACO Tooling",
+      "description": "All-in-One and Account Checkout Only tools, queue processing, account management, Discord and Whop integrations"
+    },
+    {
+      "title": "Mobile Analysis & Debugging",
+      "description": "Android and iOS app reverse engineering, debugging, runtime inspection, and APK analysis"
+    },
+    {
+      "title": "Computer Vision",
+      "description": "Deep learning models for real-time object detection, tracking, and pose estimation, from body tracking on phones to drone-based systems"
     },
     {
       "title": "On-device ML",
@@ -261,7 +279,23 @@
     },
     {
       "category": "AI & Automation",
-      "items": ["LLM Integration", "OpenAI API", "Anthropic API", "RAG Pipelines", "Workflow Automation"]
+      "items": ["LLM Integration", "OpenAI API", "Anthropic API", "RAG Pipelines", "Workflow Automation", "AI agents"]
+    },
+    {
+      "category": "Reverse Engineering & Security",
+      "items": ["API analysis", "Protocol reverse engineering", "Binary inspection", "Android debugging", "iOS analysis", "APK unpacking", "Code obfuscation analysis"]
+    },
+    {
+      "category": "Anti-Bot & Browser Security",
+      "items": ["Akamai bypass", "DataDome evasion", "Incapsula bypass", "Browser fingerprint spoofing", "CAPTCHA solving", "WAF evasion", "TLS fingerprinting"]
+    },
+    {
+      "category": "Browser Automation & Scraping",
+      "items": ["Selenium", "Puppeteer", "Playwright", "Scrapy", "BeautifulSoup", "Custom automation", "Web scraping", "Retail automation"]
+    },
+    {
+      "category": "AIO / ACO & Automation",
+      "items": ["All-in-One tools", "Account Checkout Only", "Queue processing", "Account management", "Discord bots", "Whop integrations", "Multi-account systems"]
     }
   ],
 
