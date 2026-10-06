@@ -21,26 +21,24 @@
   },
 
   "profile": {
-    "name": "Rui Jin",
-    "headline": "Senior AI/ML Engineer",
-    "location": "Surigao del Norte, Philippines",
-    "email": "ruijin.developer@gmail.com",
+    "name": "Carlos Valmonte",
+    "headline": "Senior AI/ML Fullstack Engineer",
+    "location": "Taguig, Philippines",
+    "email": "carlosvalmonte78@gmail.com",
     "avatar": "",
     "status": "Open to lead AI/ML roles",
     "bio": "Right now I help train and evaluate large language models on Outlier and AfterQuery, writing prompts and grading model answers against detailed rubrics. Over 7+ years I've built ML and full-stack software, from real-time computer vision on phones and drones to the apps around it.",
-    "resume": "/Rui_Jin_Resume.pdf",
+    "resume": "/Carlos_Valmonte_Resume.pdf",
     "summary": "Senior AI/ML Engineer with 7+ years of experience building computer vision, on-device machine learning, and large language model (LLM) systems, along with the data pipelines and full-stack software around them. Built real-time pose and gesture tracking that runs on-device on iOS and Android phones at a 30 fps target, YOLO-based object detection for phones and drones, and 20+ full-stack and AI integration projects for clients on AWS and Google Cloud. Currently train and evaluate LLMs through prompt engineering, rubric-based evaluation, and hallucination review. Experienced in taking models from data pipelines and training through optimization, deployment, and real-world accuracy testing.",
-    "phone": "+63 931 207 1477",
+    "phone": " ",
     "mainTech": ["Python", "TensorFlow", "OpenCV", "YOLO", "LLMs", "React", "Next.js", "AWS", "Google Cloud"]
   },
 
   "social": [
     { "label": "GitHub", "url": "https://github.com/ruijindev0801" },
     { "label": "X", "url": "https://x.com/invictusDev0" },
-    { "label": "WhatsApp", "url": "https://wa.me/639312071477", "hidden": true },
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/rui-jin-319400434", "hidden": true },
-    { "label": "Hugging Face", "url": "https://huggingface.co/ruijindev0801", "hidden": true },
-    { "label": "Kaggle", "url": "https://www.kaggle.com/ruijindev0801", "hidden": true }
+    { "label": "WhatsApp", "url": "https://wa.me/447418355740", "hidden": true },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/carlosvalmonte", "hidden": true }
   ],
 
   "now": {
@@ -111,69 +109,64 @@
 
   "experience": [
     {
-      "role": "AI Training & Evaluation Specialist",
-      "company": "Outlier & AfterQuery",
-      "start": "2025-03",
+      "role": "Data Annotation & LLM Evaluation Specialist",
+      "company": "Outlier & Handshake & Data Annotation",
+      "start": "2026-03",
       "end": null,
-      "summary": "Help AI companies train and evaluate their large language models (LLMs) through the Outlier and AfterQuery platforms, improving the data those models learn from and are measured against.",
+      "summary": "Help AI companies train and evaluate their large language models (LLMs) through data annotation and evaluation platforms, improving the data those models learn from and are measured against.",
       "highlights": [
         "Write and refine prompts across classification, summarization, code generation, and multi-step reasoning tasks, including hard prompts built to expose where models fail.",
         "Score and compare model responses side by side against detailed rubrics for accuracy, reasoning, and instruction following, and write a clear justification for each rating.",
         "Flag hallucinations and factual errors, and rewrite weak answers into clear, correct reference responses.",
-        "Review generated code for correctness and readability, drawing on 7+ years of software and ML engineering."
+        "Review generated code for correctness and readability, drawing on software and ML engineering experience."
       ],
-      "tech": ["LLMs", "Prompt engineering", "LLM evaluation", "RLHF", "Code review"]
+      "tech": ["LLMs", "Prompt engineering", "LLM evaluation", "Data annotation", "Quality assurance"]
     },
     {
-      "role": "AI/ML Engineer",
-      "company": "Nex",
-      "url": "https://www.nex.inc",
-      "start": "2022-12",
-      "end": "2025-03",
-      "summary": "Worked on the real-time body tracking behind Nex's motion-controlled games, where players control the game by moving in front of their phone's camera.",
+      "role": "Full Stack Developer",
+      "company": "Manulife IT Delivery Center Asia",
+      "start": "2022-05",
+      "end": "2026-03",
+      "summary": "Built an enterprise compliance platform using React, Next.js, TypeScript, and Python FastAPI, delivering scalable backend services and optimized frontend experiences.",
       "highlights": [
-        "Built and optimized lightweight computer vision models for real-time pose and gesture tracking on iOS and Android phones, targeting 30 fps with all inference running on-device.",
-        "Worked on two of the hardest parts of the pipeline: encoding high-quality video on the phone and keeping the network connection stable.",
-        "Wrote low-latency code for camera input, sensor fusion, and model inference, and connected it to the SDK our game designers and outside Unity developers used to build motion-controlled games.",
-        "Set up data pipelines and MLOps tooling to train, evaluate, and deploy models, plus debugging tools to check tracking accuracy across different lighting and room setups."
+        "Built an enterprise compliance platform using React, Next.js, TypeScript, and Python FastAPI.",
+        "Developed scalable REST APIs, backend services, and secure application workflows.",
+        "Implemented authentication and authorization for enterprise application access.",
+        "Integrated internal and external services through API-based integrations.",
+        "Automated business workflows, reducing QA workload by 70%.",
+        "Improved application performance by optimizing SSR, increasing Lighthouse score from 72 to 94."
       ],
-      "tech": ["Computer vision", "Pose estimation", "On-device ML", "Sensor fusion", "MLOps"]
+      "tech": ["React", "Next.js", "TypeScript", "Python", "FastAPI", "PostgreSQL", "REST APIs", "Docker", "AWS"]
     },
     {
-      "role": "Freelance Software Developer",
-      "company": "Upwork",
-      "start": "2021-06",
-      "end": "2022-11",
+      "role": "Full Stack Developer",
+      "company": "Everise",
+      "start": "2020-11",
+      "end": "2022-05",
+      "summary": "Developed enterprise web applications using React, Next.js, and Java, building backend services and REST API integrations supporting business workflows.",
       "highlights": [
-        "Completed 20+ full-stack and AI integration projects while keeping a 5-star client rating.",
-        "Built and shipped web apps with React, Next.js, Flask, and Python on AWS and Google Cloud for SaaS, e-commerce, and analytics clients.",
-        "Added LLM features and third-party API integrations to client products, and automated manual workflows along the way."
+        "Developed enterprise web applications using React, Next.js, and Java.",
+        "Built backend services and REST API integrations supporting business workflows.",
+        "Integrated multiple systems into unified application services.",
+        "Automated customer workflows handling 1,500+ monthly requests.",
+        "Improved API performance by 35% through async processing and database optimization.",
+        "Reduced page load time from 3.4s to 1.9s through SSR and frontend optimization."
       ],
-      "tech": ["React", "Next.js", "Flask", "Python", "JavaScript", "AWS", "GCP"]
+      "tech": ["React", "Next.js", "Python", "PHP", "Java", "Django", "PostgreSQL", "REST APIs", "Docker"]
     },
     {
-      "role": "Full-Stack Developer",
-      "company": "Customized Limited",
-      "start": "2019-09",
-      "end": "2022-11",
+      "role": "Full Stack Developer",
+      "company": "Toshiba",
+      "start": "2017-09",
+      "end": "2020-05",
+      "summary": "Built a real-time monitoring platform supporting 4,000+ concurrent users, developing frontend dashboards and backend APIs for operational systems.",
       "highlights": [
-        "Built, tested, and deployed front-end and back-end features for the company's platform using Java, Python, and Node.js.",
-        "Used Python to connect the platform to the company's computer vision and machine learning models.",
-        "Worked with full-time engineers and ML interns who processed and labeled the video data behind those models."
+        "Built a real-time monitoring platform supporting 4,000+ concurrent users.",
+        "Developed frontend dashboards and backend APIs for operational systems.",
+        "Improved responsiveness by 40% through real-time processing and caching.",
+        "Optimized API performance, reducing redundant database operations by 35%."
       ],
-      "tech": ["Java", "Python", "Node.js"]
-    },
-    {
-      "role": "Software Engineer Intern",
-      "company": "Cloudbreakr",
-      "location": "Hong Kong",
-      "start": "2018-06",
-      "end": "2019-08",
-      "highlights": [
-        "Built features for an influencer marketing platform, using PHP and Laravel on the back end and JavaScript and React on the front end.",
-        "Added tracking charts to influencer profiles and built dashboards that showed brand clients the ROI of their campaigns."
-      ],
-      "tech": ["PHP", "Laravel", "JavaScript", "React"]
+      "tech": ["Real-time systems", "Frontend dashboards", "Backend APIs", "Database optimization", "Caching"]
     }
   ],
 
@@ -208,7 +201,20 @@
   "writing": [],
 
   "skills": [
-    { "category": "Languages", "items": ["Python", "TypeScript", "JavaScript", "Java", "C#", "SQL", "PHP"] },
+    { "category": "Languages", "items": ["Python", "TypeScript", "JavaScript", "Java", "C#", "SQL", "PHP", "Go"] },
+    {
+      "category": "Frontend",
+      "items": ["React", "React.js", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Vue", "SSR/CSR", "WebSockets", "Responsive UI", "Enterprise Integration"]
+    },
+    {
+      "category": "Backend & APIs",
+      "items": ["Python", "FastAPI", "Django", "PHP", "Node.js", "Java", "Go", "Flask", "Laravel", "REST APIs", "Microservices", "Async Programming", "Authentication", "Authorization", "Workflow Automation", "Secure Application Design", "API Integrations"]
+    },
+    {
+      "category": "Databases",
+      "items": ["PostgreSQL", "MongoDB", "Redis", "NoSQL"]
+    },
+    { "category": "Cloud & DevOps", "items": ["AWS", "Google Cloud (GCP)", "Docker", "Kubernetes", "CI/CD", "Git"] },
     {
       "category": "Machine learning & computer vision",
       "items": [
@@ -243,30 +249,28 @@
         "Rubric-based evaluation",
         "Hallucination review",
         "LLM integration",
-        "Natural language processing (NLP)"
+        "Natural language processing (NLP)",
+        "OpenAI API",
+        "Anthropic API",
+        "RAG Pipelines"
       ]
     },
     {
       "category": "Data & MLOps",
-      "items": ["ML pipelines", "MLOps", "ETL pipelines", "NoSQL", "Data analytics", "Data visualization"]
+      "items": ["ML pipelines", "MLOps", "ETL pipelines", "Data analytics", "Data visualization"]
     },
-    { "category": "Cloud & DevOps", "items": ["AWS", "Google Cloud (GCP)", "Docker", "Kubernetes", "CI/CD", "Git"] },
-    { "category": "Backend & APIs", "items": ["Node.js", "Flask", "Laravel", "REST APIs"] },
-    { "category": "Frontend", "items": ["React", "Next.js", "Tailwind CSS"] }
+    {
+      "category": "AI & Automation",
+      "items": ["LLM Integration", "OpenAI API", "Anthropic API", "RAG Pipelines", "Workflow Automation"]
+    }
   ],
 
   "education": [
     {
       "degree": "Bachelor of Computer Science",
-      "school": "City University of Hong Kong",
-      "url": "https://www.cityu.edu.hk",
-      "location": "Hong Kong",
-      "start": "2016-05",
-      "end": "2020-01",
-      "details": [
-        "Graduated with honors, focusing on software development and AI",
-        "Thesis: AI-driven web applications"
-      ]
+      "school": "College of Innovation and Integrated Technology",
+      "start": "2013-06",
+      "end": "2017-03"
     }
   ],
 
